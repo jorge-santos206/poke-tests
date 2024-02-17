@@ -1,0 +1,174 @@
+*{margin:0;}
+
+
+
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #F3EDC8;
+    font-family: 'Times New Roman', Times, serif;
+   
+
+}
+
+
+.menu{
+    background-color: #C70039;
+    display: grid;
+    align-items: top;
+   
+    height: 30%;
+  
+    
+}
+.container{
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100%;
+
+}
+
+#pokemonName{
+
+    position: relative;
+    width: 50%;
+    justify-self: center;
+    border-radius: 20px;
+    height: 40%;
+    background-color: #FFE4C9;
+    border: none;
+    
+}
+.title{
+    margin: 0;
+    text-align: center;
+    align-self: baseline;
+    color: #F3EDC8;
+    
+}
+
+
+input {
+    text-align: center;
+  }
+  ::-webkit-input-placeholder {
+    text-align: center;
+    color: #C70039;
+  }
+  :-moz-placeholder {
+    text-align: center;
+    color: #C70039;
+  }
+
+  .container{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 20% 80%;
+ 
+  
+  }
+
+  .nav-bar{
+
+  display: grid;
+  grid-template-rows: 15% 15% 15% 15%;
+
+  
+
+  }
+  .btn-sprites{
+    position:relative;
+    height: 50%;
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+    background-color: #C70039;
+    color: #F3EDC8;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .btn-moves {
+    position:relative;
+    height: 50%;
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+    background-color: #C70039;
+    color: #F3EDC8;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .btn-all{
+    position:relative;
+    height: 50%;
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+    background-color: #C70039;
+    color: #F3EDC8;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .btn-shine{
+    position:relative;
+    height: 50%;
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+    background-color: #C70039;
+    color: #F3EDC8;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+
+
+
+  .pokemon-template{
+    position: relative;
+    display: grid;
+    width: 20%;
+    height: 40%;
+   
+   
+    
+   
+  }
+  .pokemon-info{
+    position: relative;
+    height: 100%;
+    text-align: center;
+    background-color: #F3D7CA;
+    border-radius: 0px 0px 10px 10px;
+    align-self: start;
+    
+    overflow: hidden;
+  }
+ .pokemon-template-title{
+    position: relative;
+    background-color: #C70039;
+    border-radius: 10px 10px 0px 0px;
+    color: #F3EDC8;
+    align-self:self-end;
+   
+    text-align: center;
+    overflow:hidden ;
+    
+ }
+
+ .content{
+
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+ 
+ }
+ 
