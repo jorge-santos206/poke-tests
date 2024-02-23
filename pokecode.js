@@ -33,33 +33,39 @@ btnSprites.addEventListener("click",()=>{
     // })
 
 
-    btnAll.addEventListener("click",()=>{
-       for(let i=1; i<=10; i++){
-        fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-        .then(data=>{
-            return data.json();
-        })
-        .then(num =>{
-            
-               const sprite1= num.sprites.front_default; 
-               const test= num.species.name;
-           
-            const insert=`<div class="pokemon-template">
-            <h2 class="pokemon-template-title">${test}</h2>
-            <div class="pokemon-info">
-                <p>pokemon type</p>
-                <img src="${sprite1}" alt="Pokemon Sprite" id="pokemonSprite" >
-            </div>` ;
-           document.querySelector('.content').insertAdjacentHTML('beforeend',insert);
-        })
-        .catch(error=>{
-                   console.error(error);
-               });
-
-
-       }
-    })
-
+    btnAll.addEventListener("click", () => {
+        const pokemonPromises = [];
+        for (let i = 152; i <= 251; i++) {
+          pokemonPromises.push(
+            fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+              .then(data => {
+                return data.json();
+              })
+              .then(num => {
+                const sprite1 = num.sprites.front_default;
+                const test = num.species.name;
+      
+                const insert = `<div class="pokemon-template">
+                  <h2 class="pokemon-template-title">${test}</h2>
+                  <div class="pokemon-info">
+                      <p>pokemon type</p>
+                      <img src="${sprite1}" alt="Pokemon Sprite" id="pokemonSprite" >
+                  </div>`;
+                return insert;
+              })
+          );
+        }
+      
+        Promise.all(pokemonPromises)
+          .then(insertStrings => {
+            insertStrings.forEach(insertString => {
+              document.querySelector('.content').insertAdjacentHTML('beforeend', insertString);
+            });
+          })
+          .catch(error => {
+            console.error(error);
+          });
+      });
 
 
 
