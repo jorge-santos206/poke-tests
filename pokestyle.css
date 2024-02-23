@@ -18,7 +18,7 @@ body{
     display: grid;
     align-items: top;
    
-    height: 30%;
+    height: max(30%,150px);
   
     
 }
@@ -74,15 +74,15 @@ input {
   .nav-bar{
 
   display: grid;
-  grid-template-rows: 15% 15% 15% 15%;
+  grid-template-rows: min(15%,150px) min(15%,150px) min(15%,150px) min(15%,150px);
 
   
 
   }
   .btn-sprites{
     position:relative;
-    height: 50%;
-    width: 70%;
+    height: min(50%,50px);
+    width: max(70%,70px);
     justify-self: center;
     align-self: center;
     background-color: #C70039;
@@ -93,8 +93,8 @@ input {
   }
   .btn-moves {
     position:relative;
-    height: 50%;
-    width: 70%;
+    height: min(50%,50px);
+    width: max(70%,70px);
     justify-self: center;
     align-self: center;
     background-color: #C70039;
@@ -105,8 +105,8 @@ input {
   }
   .btn-all{
     position:relative;
-    height: 50%;
-    width: 70%;
+    height: min(50%,50px);
+    width: max(70%,70px);
     justify-self: center;
     align-self: center;
     background-color: #C70039;
@@ -117,8 +117,8 @@ input {
   }
   .btn-shine{
     position:relative;
-    height: 50%;
-    width: 70%;
+    height: min(50%,50px);
+    width: max(70%,70px);
     justify-self: center;
     align-self: center;
     background-color: #C70039;
@@ -134,8 +134,9 @@ input {
   .pokemon-template{
     position: relative;
     display: grid;
-    width: 20%;
-    height: 40%;
+    width: max(20%,150px);
+    height: min(40%,200px);
+    padding: 5px;
    
    
     
